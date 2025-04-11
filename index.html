@@ -13,5 +13,28 @@
     <a href="#">Gallery</a>
     <a href="#">Contact_Us</a>
     </div>
+    <section>
+        <img class="myslides" src="nice guys.jpg" style="height: 700px; width: 100%;">
+        <img class="myslides" src="Qatar_Airways_Airbus_A380_A7-API_Perth_2024_(01).jpg" style="height: 700px; width: 100%;">
+    </section>
+    
+    <script>
+       var myIndex = 0;
+       carousel();
+
+       function carousel() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i ++) {
+            slides[i].style.display = "none";
+        }
+        myIndex++;
+        if(myIndex > slides.length) {
+            myIndex = 1;
+        }
+        slides[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 3000);
+       }
+    </script>
 </body>
 </html>
